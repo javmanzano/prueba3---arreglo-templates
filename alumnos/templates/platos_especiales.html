@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body class="fondoprincipal">
+    <div class="compras">
+        <div class="container mt-5">
+            <h1>Platos Especiales</h1>
+            <div class="row">
+                {% for platillo in platillos %}
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="{{ platillo.imagen.url }}" class="card-img-top" alt="{{ platillo.nombre }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ platillo.nombre }}</h5>
+                            <p class="card-text">{{ platillo.descripcion }}</p>
+                            <p class="card-text"><strong>${{ platillo.precio }}</strong></p>
+                            <form method="post" action="{% url 'carrito' %}">
+                                {% csrf_token %}
+                                <input type="hidden" name="platillo_id" value="{{ platillo.id }}">
+                                <input type="number" name="cantidad" value="1" min="1" class="form-control mb-2">
+                                <button type="submit" class="btn btn-primary">Agregar al Carrito</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>   
+</div> 
+</body>
+{% endblock %}

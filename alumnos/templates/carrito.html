@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body class="fondoprincipal">
+            <div class="compras">
+                <div class="fondoformulario">
+                <div class="container mt-5">
+                    <h1>Carrito de Compras</h1>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Platillo</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                                <th>Subtotal</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in carrito_items %}
+                            <tr>
+                                <td><img src="{{ item.platillo.imagen.url }}" class="img-thumbnail" style="width: 100px;" alt="{{ item.platillo.nombre }}"></td>
+                                <td>{{ item.platillo.nombre }}</td>
+                                <td>{{ item.cantidad }}</td>
+                                <td>${{ item.platillo.precio }}</td>
+                                <td>${{ item.subtotal }}</td>
+                                <td>
+                                    <form method="post" style="display:inline;">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="item_id" value="{{ item.id }}">
+                                        <button type="submit" name="eliminar" class="btn btn-danger">Eliminar</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <h3>Total: ${{ total }}</h3>
+                    <a href="{% url 'pagar' %}" class="btn btn-primary">Pagar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

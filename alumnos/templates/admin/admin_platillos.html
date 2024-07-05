@@ -1,0 +1,35 @@
+{% extends 'admin/admin_base.html' %}
+{% block content %}
+{% load static %}
+<div class="container mt-5">
+    <h1>Gestión de Platillos</h1>
+    <a href="{% url 'agregar_platillo' %}" class="btn btn-success mb-3">Agregar Platillo</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for platillo in platillos %}
+            <tr>
+                <td>{{ platillo.nombre }}</td>
+                <td>{{ platillo.descripcion }}</td>
+                <td>${{ platillo.precio }}</td>
+                <td>
+                    <a href="{% url 'ver_platillo' platillo.id %}" class="btn btn-info">Ver</a>
+                    <a href="{% url 'editar_platillo' platillo.id %}" class="btn btn-info">Editar</a>
+                    <form action="{% url 'eliminar_platillo' platillo.id %}" method="post" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

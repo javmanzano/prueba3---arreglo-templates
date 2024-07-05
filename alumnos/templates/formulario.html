@@ -1,0 +1,91 @@
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <!--ESTA SECCION ES PARA EL FORMULARIO DE CONTACTO, SE UITILIZO CLASES DE BOOSTRAP Y PARA FINALIZAR EL BOTON DE ENVIO ES EN FORMATO JAVASCRIPT QUE MANDA UN ALERTA-->
+    <body class="fondoprincipal">
+        <div class="ordenarformulario">
+                <div class="fondoformulario">
+                    <div class="ordenarformularios">
+                        <form name="formValidation" id="validar" action="valid.html">
+                            <h1>Crear una cuenta</h1>
+                            <div class="form-row">
+                            <div class="col">
+                                <label for="inputname1">Primer nombre</label>
+                                <input type="text" class="form-control" placeholder="" name="name"  required>
+                            </div>
+                            <div class="col">
+                                <label for="inputname2">Apellido</label>
+                                <input type="text" class="form-control" name="apellido"  placeholder="">
+                            </div>
+                            </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" name="email" id="email" required>
+                            </div>
+                            <div class="col">
+                                <label for="inputcelular">Contraseña</label>
+                                <input type="password" class="form-control"  name="password" id="password" placeholder="">
+                                <small id="passwordHelpInline" class="text-muted">
+                                    Debe ser de 8-20 caracteres.
+                                  </small>
+                            </div>
+                            
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputcelular">Reingrese la Contraseña</label>
+                                <input type="password" class="form-control"  name="confirm_password" id="confirm_password" placeholder="">
+                                <br>
+                            <div class="text=center">
+                                <input type="submit" value="Enviar">
+                            </div>
+                            </div>      
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <div class="social-media-links text-center mt-4">
+        <h5>Síguenos en nuestras redes sociales:</h5>
+        <a href="https://instagram.com/tacos.loco" class="btn btn-secondary mx-2">
+            <i class="fab fa-instagram"></i> mexico.michelin
+        </a>
+        <a href="https://facebook.com/tacos.locofb" class="btn btn-secondary mx-2">
+            <i class="fab fa-facebook"></i> mexicomichelinFB
+        </a>
+        <a href="https://x.com/tacos.locos/locos" class="btn btn-secondary mx-2">
+            <i class="fab fa-x"></i> @mexicomichelin
+        </a>
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
+            Verificar si estamos en servicio
+          </button>
+          
+          
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">EL PEUCO</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Si estamos atendiendo, Recuerda revisar nuestros locales
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</body>
+
+    
+
+{% endblock %}

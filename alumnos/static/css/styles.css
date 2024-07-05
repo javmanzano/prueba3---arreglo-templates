@@ -1,0 +1,495 @@
+/*se agrego como componente botones para el navbar */
+
+
+
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+.item {
+    padding: 10px;
+    width: 300px;
+    background-color: rgba(143, 124, 16, 0.459);
+    border-radius: 15px; /*REDONDEO BORDES DENUEVO*/
+}
+.item img {
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+.navbar-custom {
+    background-color: rgba(0, 0, 0, 0.932); 
+}
+.botonesmargen{
+    padding-bottom: 10px;
+}
+.navbar-custom .btn-secondary {
+    background-color: #343a40; 
+    border-color: #343a40; /
+}
+.botoneslocos{
+    margin-top: 20px;
+}
+
+.navbar-custom .btn-secondary:hover {
+    background-color: #23272b; 
+    border-color: #1d2124; 
+}
+
+/*DEFINIMOS EL TAMANO DE LAS IMAGENES*/
+.carrusel{
+    width: 100%;
+    height: 887px;
+}
+/* CAMBIAMOS LA DECORACION Y EL COLOR DEL LINK AL PONER EL CURSOR ENCIMA*/
+a:hover{
+    text-decoration: none;
+    color: aqua;
+}
+/* CAMBIA LA ESTETICA DE EL LINK EN GENERAL*/
+a{
+    text-decoration: none;
+    color: white
+}
+/* CAMBIA EL COLOR DEL FONDO DE LA PAGINA*/
+.fondoprincipal{
+    background-color: #C6B583;
+}
+
+.fondoprincipaldjango{
+    background-color: #C6B583;
+}
+.ordenarformulario {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.fondoformulario {
+    background-color: #D0CDB3;
+    padding: 2%; /* Reducido para menos espacio interior */
+    border-radius: 15px; /* Esquinas redondeadas */
+    max-width: 800px; /* Ancho máximo para controlar el tamaño */
+    margin: 2% auto; /* Centrar el formulario horizontalmente */
+}
+
+.input_container input[type="submit"] {
+    border-radius: 10px; /* Esquinas redondeadas para el botón también */
+}
+
+.ordenarformularios{
+   padding-top: 7%;
+   padding-left: 13%;
+   padding-right: 13%;
+   padding-bottom: 15%;
+
+}
+.compras{
+    padding-top: 1%;
+    padding-bottom: 15%;
+}
+
+
+ 
+
+.fondocartas{
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+}
+.fondocartass{
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+}
+h1{
+    font-size: 300%;
+}
+
+.fondorestaurant{
+    padding-top: 7%;
+   padding-left: 13%;
+   padding-right: 13%;
+   padding-bottom: 15%;
+}
+
+h2{
+    font-size: 300%;
+}
+
+.imagenrestaurant{
+    padding-top: 4%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 15%;
+ 
+ }
+
+ .ordenarimagenrestaurant{
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 1%;
+
+}
+.imagechica{
+    width: 40%;
+    height: 40%;
+}
+.separador{
+    margin-top: 2%;
+}
+/* DEFINE TAMANO DE LA CARTAS*/
+.cartas{
+    width: 100%;
+    height: 300px;
+}
+/* DEFINE EL TAMANO DE LAS IMAGENES EN EL CARRITO DE COMPRAS*/
+.carrito{
+    width: 250px;
+    height: 200px;
+}
+.input_container{
+    width: 600px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    border: 10px solid #41b9ff;
+
+}
+.input_container .input-row{
+    margin-bottom: 12px;
+}
+
+.input_container input:not([type="submit"]),
+.input_container textarea{
+    width: 100%;
+    margin: 0 0 3px;
+    background-color: #d6d6d6;
+    color: #000;
+    padding: 10px 15px;
+    height: 50px;
+    line-height: 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    outline: 0;
+    transition: all 0.5s ease-out;
+}
+.input_container textarea{
+    height: 100px;
+    resize: none;
+
+}
+
+.input_container input:not([type="submit"]):focus,
+.input_container textarea:focus{
+    border-color: #2793d2;
+
+}
+
+.input_container input[type="submit"]{
+    padding: 10px 30px;
+    font-size: 18px;
+    line-height: 30px;
+    height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #2793d2;
+    color: #fff;
+    border: 0;
+    transition: all 0.5s ease-out;
+    border-radius: 5px;
+}
+.input_container input[type="submit"]:hover{
+    background-color: #000;
+}
+
+em.error{
+    font-weight: 700;
+    display: block;
+    color: #f00;
+    font-size: 14px;
+}
+
+div input[type="submit"]{
+    padding: 10px 30px;
+    font-size: 18px;
+    line-height: 30px;
+    height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #2793d2;
+    color: #fff;
+    border: 0;
+    transition: all 0.5s ease-out;
+    border-radius: 5px;
+}
+
+#map {
+	height: 650px;
+	width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.fondomapa{
+    padding-top: 0.5%;
+    padding-bottom: 2.7%;
+    background-color: #C6B583;
+}
+.ordenmapa{
+  margin-left: 30%;
+  margin-right: 30%;
+}
+.textoorden{
+    margin-left: 34% ;
+    text-decoration: none;
+    color: black;
+}
+.fondoferiado{
+    background-color: #000;
+}
+.ayuda{
+    margin-left: 300px;
+}
+.btn-header {
+    background-color: var(--clr-gray);
+    padding: .5rem;
+    border-radius: 100vmax;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .25);
+    transition: .2s;
+}
+
+.btn-header:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
+}
+
+
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%; /* Asegura que cada campo ocupe todo el espacio disponible */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #2793d2;
+}
+
+input[type="submit"] {
+    background-color: #2793d2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #000;
+}
+
+.form-row > div {
+    width: calc(50% - 10px); /* Cada campo ocupa la mitad del ancho de la fila */
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+.fondocontactodjango {
+    background-color: black;
+}
+
+
+
+/* actual */
+.table-bordered {
+    border: 2px solid #ddd;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 2px solid #ddd;
+}
+
+.fondoprincipal-contacto {
+    background-color: #f5f5f5;  /* Color de fondo neutro */
+}
+
+.table-container {
+    background-color: #ffffff;  /* Fondo blanco para la tabla */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* sda */
+
+.footercustom {
+    background-color: black; /* Color negro para el footer */
+    color: #fff; /* Color blanco para el texto */
+    padding: 20px 0;
+}
+
+.footercustom .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footercustom .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footercustom .col-md-4 {
+    flex: 1;
+    padding: 10px;
+}
+
+.footercustom img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footercustom a {
+    color: #fff;
+}
+
+.footercustom a:hover {
+    color: #ccc;
+}
+
+textarea {
+    border-radius: 10px; /* Ajusta el valor para más o menos redondeo */
+}
+
+.form-row .col {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row > div {
+        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    }
+
+    .form-group {
+        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    }
+}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Ajusta el tamaño según sea necesario */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Ajusta el tamaño según sea necesario */
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* Espaciado entre botones del navbar en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .navbar-nav .nav-item {
+        margin-bottom: 5px; /* Añade espacio vertical entre los botones */
+    }
+
+    .navbar-nav .nav-item .btn {
+        margin-bottom: 5px; /* Ajusta el espacio entre los botones */
+    }
+}
+
+/* Espaciado adicional para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .navbar-nav .nav-item {
+        margin-bottom: 5px; /* Aumenta el espacio vertical entre los botones */
+    }
+
+    .navbar-nav .nav-item .btn {
+        margin-bottom: 5px; /* Aumenta el espacio entre los botones */
+    }
+}
+/* Espaciado entre botones de inicio/cierre de sesión en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .navbar-nav .nav-item {
+        margin-bottom: 10px; /* Añade espacio vertical entre los botones */
+    }
+
+    .navbar-nav .nav-item .btn {
+        margin-bottom: 5px; /* Ajusta el espacio entre los botones */
+    }
+
+    .navbar-nav .nav-item .btn-danger, .navbar-nav .nav-item .btn-secondary {
+        width: 100%; /* Hace que los botones ocupen todo el ancho disponible */
+        text-align: center; /* Centra el texto dentro del botón */
+        margin-bottom: 10px; /* Añade espacio adicional entre estos botones */
+    }
+}
+
+/* Espaciado adicional para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .navbar-nav .nav-item {
+        margin-bottom: 15px; /* Aumenta el espacio vertical entre los botones */
+    }
+
+    .navbar-nav .nav-item .btn-danger, .navbar-nav .nav-item .btn-secondary {
+        width: 100%; /* Asegura que los botones ocupen todo el ancho disponible */
+        text-align: center; /* Centra el texto dentro del botón */
+        margin-bottom: 10px; /* Aumenta el espacio adicional entre estos botones */
+    }
+}
+
+
+
+/* Ajustes adicionales para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .carousel-inner {
+        height: 600px; /* Tamaño reducido para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-inner {
+        height: 600px; /* Tamaño reducido para pantallas aún más pequeñas */
+    }
+}

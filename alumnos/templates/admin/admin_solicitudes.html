@@ -1,0 +1,40 @@
+{% extends 'admin/admin_base.html' %}
+
+{% block content %}
+<div class="container mt-5 table-container">
+    <h1>Solicitudes de Contacto</h1>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Celular</th>
+                <th>Comentario</th>
+                <th>Fecha</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for solicitud in solicitudes %}
+            <tr>
+                <td>{{ solicitud.nombre }}</td>
+                <td>{{ solicitud.apellido }}</td>
+                <td>{{ solicitud.email }}</td>
+                <td>{{ solicitud.celular }}</td>
+                <td>{{ solicitud.comentario }}</td>
+                <td>{{ solicitud.fecha }}</td>
+                <td>
+                    <a href="{% url 'ver_solicitud' solicitud.id %}" class="btn btn-secondary mr-2">Ver</a>
+                    <a href="{% url 'responder_solicitud' solicitud.id %}" class="btn btn-secondary mr-2">Responder</a>
+                    <form action="{% url 'eliminar_solicitud' solicitud.id %}" method="post" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body class="fondoprincipal">
+    <div class="ordenarformulario">
+        <div class="fondoformulario">
+            <div class="ordenarformularios">
+                <div class="container">
+                    <div class="container mt-5">
+                        <h1>Iniciar Sesión</h1>
+                        <form method="post" action="{% url 'login' %}">
+                            {% csrf_token %}
+                            {{ form.non_field_errors }}
+                            <div class="form-group">
+                                <label for="username">Correo electrónico o Usuario:</label>
+                                {{ form.username }}
+                                {{ form.username.errors }}
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Contraseña:</label>
+                                {{ form.password }}
+                                {{ form.password.errors }}
+                            </div>
+                            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
