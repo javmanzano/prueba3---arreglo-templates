@@ -11,7 +11,7 @@ from .forms import FormularioContacto  , RespuestaContactoForm  , PlatilloForm
 from collections import defaultdict
 from django.shortcuts import redirect
 from django.contrib import messages
-
+from django.core.paginator import Paginator
 
 
 
@@ -57,10 +57,18 @@ def responder_solicitud(request, solicitud_id):
         form = RespuestaContactoForm()
     return render(request, 'admin/responder_solicitud.html', {'form': form, 'solicitud': solicitud}) 
 
-@user_passes_test(es_admin)
+@user_passes_test(lambda u: u.is_superuser)
 def admin_platillos(request):
+    query = request.GET.get('q', '')  # Usa una cadena vacía si 'q' es None
     platillos = Platillo.objects.all()
-    return render(request, 'admin/admin_platillos.html', {'platillos': platillos})
+    if query:
+        platillos = platillos.filter(nombre__icontains=query)
+    
+    paginator = Paginator(platillos, 5)  # Muestra 5 platillos por página.
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    
+    return render(request, 'admin/admin_platillos.html', {'page_obj': page_obj, 'query': query})
 
 @user_passes_test(es_admin)
 def ver_platillo(request, platillo_id):
@@ -226,3 +234,7 @@ def pagar(request):
 
 def redireccionar(request):
     return redirect('/alumnos/')
+
+@login_required
+def catalogo(request):
+    return render(request, 'catalogo.html')

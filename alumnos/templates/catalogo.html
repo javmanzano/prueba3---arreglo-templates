@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body class="fondoprincipal">
+    
+
+    <div class="container mt-5">
+        <h1>Proximos platillos</h1>
+        <div class="catalogo"></div>
+    </div>
+    <script src="{% static 'js/catalogo.js' %}"></script>
+
+</body>
+{% endblock %}

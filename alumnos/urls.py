@@ -29,6 +29,7 @@ urlpatterns = [
     path('admin/platillos/eliminar/<int:platillo_id>/', views.eliminar_platillo, name='eliminar_platillo'),
     path('admin/platillos/ver/<int:platillo_id>/', views.ver_platillo, name='ver_platillo'),
     path('pagar/', views.pagar, name='pagar'),
-
+    path('catalogo/', views.catalogo, name='catalogo'),
 
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+ 
